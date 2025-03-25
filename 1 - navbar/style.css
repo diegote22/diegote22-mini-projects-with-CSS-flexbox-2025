@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+   background-image: url('img/mendoza.webp');
+    background-size: cover;
+}
+
+body::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit; 
+    filter: blur(5px); 
+    z-index: -1; 
+}
+
+.container{
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+
+.menu-area ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+}
+
+.menu-area li{
+    flex: 3;
+}
+
+.menu-area a{
+    display: inline-block;
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+    transition: .6s;
+    color: rgb(233, 220, 220);
+    font-weight: bold;
+    letter-spacing: 2px;
+    background: #27548A;
+    padding: 20px 5px;
+    font-family: "Roboto Flex", sans-serif;
+    text-transform: uppercase;
+}
+
+.menu-area a:hover{
+    background: #DDA853;
+    color: #27548A;
+}
+
+#WebDev{
+    background: #a13a9d;
+    color: #DDA853;
+}
+
+#WebDev:hover{
+    background: #DDA853;
+    color: #a13a9d;
+}
+
+@media all and (max-width: 1000px){
+    .menu-area ul{
+        flex-wrap: wrap;
+    }
+    .menu-area li{
+        flex: 1 1 50%;
+    }
+
+    .menu-area .icon-area{
+        flex: 1 1 25%;
+    }
+}
+
+@media all and (max-width: 500px){
+    .menu-area li{
+        flex-basis: 100%;
+    }
+}
