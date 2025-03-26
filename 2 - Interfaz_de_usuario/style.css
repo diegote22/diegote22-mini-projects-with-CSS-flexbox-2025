@@ -1,0 +1,305 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Funnel Display", sans-serif;
+    background-image: url("img/shhhh.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+body::after{
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit; 
+    filter: blur(5px); 
+    z-index: -1; 
+}
+
+/* --- Estilos del Header (con Gradiente Vertical) --- */
+.main-header {
+    padding: 40px 20px 20px 20px; /* Espaciado interior */
+    text-align: center; /* Centra el título */
+
+    /* --- Degradado Vertical --- */
+    /* Asegúrate de que no haya un background-color sólido */
+    /* background-color: transparent; */ /* O simplemente elimina la línea background-color si existía */
+    background-image: linear-gradient(
+        to bottom, /* Dirección: de arriba hacia abajo */
+        rgba(0, 0, 0, 0.65), /* Color inicial: Negro semi-transparente (más oscuro) */
+        rgba(0, 0, 0, 0) /* Color final: Negro totalmente transparente */
+    );
+    /* --- Fin Degradado --- */
+
+    margin-bottom: 30px; /* Espacio entre el header y las tarjetas */
+}
+
+/* Las reglas para .main-header h1 y el @media query se mantienen igual */
+.main-header h1 {
+    font-family: "Funnel Display", sans-serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    margin: 0;
+    line-height: 1.2;
+}
+
+@media (max-width: 600px) {
+    .main-header h1 {
+        font-size: 2.5rem;
+    }
+    .main-header {
+        padding-top: 30px;
+    }
+}
+
+h4{
+    color: rgb(241, 237, 233);
+    
+}
+
+.box-area {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.single-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    height: auto;
+    border-radius: 4px;
+    background-color: aquamarine;
+    text-align: center;
+    margin: 20px;
+    padding: 30px 20px;
+    transition: transform 0.3s, background-color 0.3s, color 0.3s;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+}
+
+.scaloni{
+    background-color: aqua;
+}
+
+.img-area {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    background-size: cover;
+    background-position: center center;
+    flex-shrink: 0;
+    transition: transform 0.3s ease; 
+}
+
+.fa-sheet-plastic{
+    color: yellow;
+}
+
+.single-box:nth-child(1) .img-area {
+    background-image: url("img/scaloni.webp");
+}
+
+.single-box:nth-child(2) .img-area {
+    background-image: url("img/Damián\ Emiliano\ Martínez.jpg");
+}
+
+.single-box:nth-child(3) .img-area {
+    background-image: url("img/Nahuel\ Molina.jpg");
+}
+
+.single-box:nth-child(4) .img-area {
+    background-image: url("img/Cuti\ Romero.jpg");
+}
+
+.single-box:nth-child(5) .img-area {
+    background-image: url("img/Nicolás\ Otamendi.webp");
+}
+
+.single-box:nth-child(6) .img-area {
+    background-image: url("img/Nicolás\ Tagliafico.jpg");
+}
+
+.single-box:nth-child(7) .img-area {
+    background-image: url("img/Leandro\ Paredes.jpg");
+}
+
+.single-box:nth-child(8) .img-area {
+    background-image: url("img/Rodrigo\ De\ Paul.jpg");
+}
+
+.single-box:nth-child(9) .img-area {
+    background-image: url("img/Alexis\ Mac\ Allister.jpg");
+}
+
+/* Efectos para Mac Allister */
+.single-box:nth-child(9):hover {
+    background-image: linear-gradient(135deg, #75aadb 0%, #ffffff 50%, #75aadb 100%); /* Gradiente celeste y blanco */
+    background-color: transparent; /* Anula el color sólido */
+    color: #1c1c1c; /* Cambia el texto a oscuro para contraste */
+    transform: translateY(-5px); /* Mantiene la elevación */
+    box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.4); /* Sombra un poco más oscura */
+    border: 1px solid #75aadb; /* Borde celeste opcional */
+}
+
+.single-box:nth-child(9):hover .line {
+    background-color: #0057b8; /* Línea azul oscuro para contraste */
+}
+
+.single-box:nth-child(9):hover .img-text h3,
+.single-box:nth-child(9):hover .img-text p {
+    color: #1c1c1c; /* Asegura texto oscuro */
+}
+/* Fin -- Efectos para Mac Allister */
+
+.single-box:nth-child(10) .img-area {
+    background-image: url("img/Thiago\ Almada.jpg");
+}
+
+.single-box:nth-child(11) .img-area {
+    background-image: url("img/Enzo\ Fernández.jpg");
+}
+
+/* Efectos para Enzo Fernandez */
+.single-box:nth-child(11):hover {
+    background-image: linear-gradient(135deg, #75aadb 0%, #ffffff 50%, #75aadb 100%); /* Gradiente celeste y blanco */
+    background-color: transparent; /* Anula el color sólido */
+    color: #1c1c1c; /* Cambia el texto a oscuro para contraste */
+    transform: translateY(-5px); /* Mantiene la elevación */
+    box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.4); /* Sombra un poco más oscura */
+    border: 1px solid #75aadb; /* Borde celeste opcional */
+}
+
+.single-box:nth-child(11):hover .line {
+    background-color: #0057b8; /* Línea azul oscuro para contraste */
+}
+
+.single-box:nth-child(11):hover .img-text h3,
+.single-box:nth-child(11):hover .img-text p {
+    color: #1c1c1c; /* Asegura texto oscuro */
+}
+/* Fin -- Efectos para Enzo Fernandez */
+
+.single-box:nth-child(12) .img-area {
+    background-image: url("img/Julián\ Álvarez.jpg");
+}
+
+/* Efectos para Julian Alvarez */
+.single-box:nth-child(12):hover {
+    background-image: linear-gradient(135deg, #75aadb 0%, #ffffff 50%, #75aadb 100%); /* Gradiente celeste y blanco */
+    background-color: transparent; /* Anula el color sólido */
+    color: #1c1c1c; /* Cambia el texto a oscuro para contraste */
+    transform: translateY(-5px); /* Mantiene la elevación */
+    box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.4); /* Sombra un poco más oscura */
+    border: 1px solid #75aadb; /* Borde celeste opcional */
+}
+
+.single-box:nth-child(12):hover .line {
+    background-color: #0057b8; /* Línea azul oscuro para contraste */
+}
+
+.single-box:nth-child(12):hover .img-text h3,
+.single-box:nth-child(12):hover .img-text p {
+    color: #1c1c1c; /* Asegura texto oscuro */
+}
+/* Fin -- Efectos para Julian Alvarez */
+
+.single-box:nth-child(13) .img-area {
+    background-image: url("img/Giuliano\ Simeone.jpg");
+}
+
+/* Efectos para Simeone */
+.single-box:nth-child(13):hover {
+    background-image: linear-gradient(135deg, #75aadb 0%, #ffffff 50%, #75aadb 100%); /* Gradiente celeste y blanco */
+    background-color: transparent; /* Anula el color sólido */
+    color: #1c1c1c; /* Cambia el texto a oscuro para contraste */
+    transform: translateY(-5px); /* Mantiene la elevación */
+    box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.4); /* Sombra un poco más oscura */
+    border: 1px solid #75aadb; /* Borde celeste opcional */
+}
+
+.single-box:nth-child(13):hover .line {
+    background-color: #0057b8; /* Línea azul oscuro para contraste */
+}
+
+.single-box:nth-child(13):hover .img-text h3,
+.single-box:nth-child(13):hover .img-text p {
+    color: #1c1c1c; /* Asegura texto oscuro */
+}
+/* Fin -- Efectos para Simeone */
+
+.header-text {
+    font-size: 22px;
+    font-weight: 700;
+    display: block;
+}
+
+.line {
+    height: 2px;
+    width: 45px;
+    background: black;
+    margin: 8px auto 10px auto;
+    transition: background-color 0.3s;
+}
+
+.img-text h3 {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+}
+
+.img-text p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #555;
+}
+
+.single-box:hover {
+    background-color: darkgoldenrod;
+    color: #fff;
+    transform: translateY(-5px);
+    box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.single-box:hover .img-text h3,
+.single-box:hover .img-text p {
+    color: #fff;
+}
+
+.single-box:hover .line {
+    background-color: #fff;
+}
+
+/* --- Footer  --- */
+footer {
+    text-align: center; /* Centra el texto */
+    margin-top: 60px; /* Espacio entre las tarjetas y el footer */
+    padding: 20px 15px; /* Espacio interior (vertical y horizontal) */
+    
+    /* --- Cambios aquí --- */
+    color: #ffffff; /* Color de texto: blanco */
+    background-color: #000000; /* Color de fondo: negro */
+    /* --- Fin de los cambios --- */
+
+    font-size: 0.9em; /* Tamaño de letra ligeramente más pequeño */
+    /* border-top: 1px solid #333; */ /* Opcional: Borde superior gris oscuro si quieres */
+}
+
+footer p {
+    margin: 0; /* Elimina el margen por defecto del párrafo */
+}
